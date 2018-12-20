@@ -12,7 +12,7 @@ var allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain);
 
 var connection = mysql.createConnection({
-    host: 'localhost',
+    host: 'votingapi-catsvdogs_mysql-dev_1',
     user: 'root',
     password: 'password',
     port: '3306',
