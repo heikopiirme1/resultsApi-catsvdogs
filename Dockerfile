@@ -1,14 +1,8 @@
 # base image
 FROM node:9.6.1
-
-# set working directory
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
-
+WORKDIR /app
+COPY package.json /app
 RUN npm install
-
-# add app
-COPY . /usr/src/app
-
-# start app
+COPY . /app
 CMD node server.js
+EXPOSE 3000
